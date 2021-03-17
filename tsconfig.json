@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["es6", "es2015.core", "es2017", "dom"],
+    "isolatedModules": false,
+    "removeComments": true,
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "noImplicitThis": false,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "baseUrl": "./",
+    "paths": {
+      "@api/*": [
+        "src/*"
+      ]
+    }
+  },
+  "exclude": ["node_modules"]
+}
