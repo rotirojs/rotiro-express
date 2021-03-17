@@ -1,6 +1,6 @@
 {
   "name": "@rotirojs/rotiro-express",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Rotiro Express Middleware",
   "author": "Alex Everitt",
   "scripts": {
