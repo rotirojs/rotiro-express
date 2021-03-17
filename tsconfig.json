@@ -6,7 +6,7 @@
     "lib": ["es6", "es2015.core", "es2017", "dom"],
     "isolatedModules": false,
     "removeComments": true,
-    "outDir": "./dist",
+    "outDir": "./lib",
     "noImplicitAny": true,
     "noImplicitThis": false,
     "strictNullChecks": true,

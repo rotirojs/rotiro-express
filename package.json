@@ -1,6 +1,6 @@
 {
   "name": "@rotirojs/rotiro-express",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rotiro Express Middleware",
   "author": "Alex Everitt",
   "scripts": {
@@ -9,8 +9,8 @@
     "clear-build": "rm -rf lib/*",
     "build": "rm -rf lib/* && tsc",
     "prepublishOnly": "rm -rf lib/* && tsc",
-    "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'",
-    "lint-fix": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts' --fix"
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint-fix": "tslint -c tslint.json 'src/**/*.ts' --fix"
   },
   "repository": {
     "type": "git",
@@ -31,5 +31,12 @@
   },
   "dependencies": {
     "rotiro": "^1.0.15"
+  },
+  "bugs": {
+    "url": "https://github.com/rotirojs/rotiro-express/issues"
+  },
+  "homepage": "https://github.com/rotirojs/rotiro-express#readme",
+  "directories": {
+    "lib": "lib"
   }
 }
