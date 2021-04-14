@@ -25,7 +25,17 @@ export class ExpressResponse implements RotiroMiddleware {
     return this._requestDetail;
   }
 
-  public sendResponse(body: any, status?: number, contentType?: string) {
+  public sendResponse(
+    body: any,
+    status?: number,
+    contentType?: string,
+    headers?: Record<string, string>
+  ) {
+    if (headers) {
+      for (const headerKey of Object.keys(headers)) {
+        this.response.setHeader(headerKey, headers[headerKey]);
+      }
+    }
     this.response.type(contentType || 'text/plain');
     this.response.status(status || 200).send(String(body));
   }

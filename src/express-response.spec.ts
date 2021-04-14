@@ -18,6 +18,7 @@ describe('middleware/express/express-response', () => {
     response.status = jest.fn().mockReturnValue({
       send: sendMock
     });
+    response.setHeader = jest.fn();
 
     expressResponse = new ExpressResponse(request, response);
   });
@@ -59,5 +60,12 @@ describe('middleware/express/express-response', () => {
     expressResponse = new ExpressResponse(request, response);
     const requestDetail: RequestDetail = expressResponse.requestDetail;
     expect(requestDetail.body).toEqual(body);
+  });
+
+  it('Applies headers to the response', () => {
+    expressResponse.sendResponse('A message', 200, '', {
+      'Content-Length': '0'
+    });
+    expect(response.setHeader).toBeCalledWith('Content-Length', '0');
   });
 });
