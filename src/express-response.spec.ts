@@ -68,4 +68,10 @@ describe('middleware/express/express-response', () => {
     });
     expect(response.setHeader).toBeCalledWith('Content-Length', '0');
   });
+
+  it('Original request is attached to request detail', () => {
+    expressResponse = new ExpressResponse(request, response);
+    const requestDetail: RequestDetail = expressResponse.requestDetail;
+    expect(requestDetail.originalRequest).toEqual(request);
+  });
 });

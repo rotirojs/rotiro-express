@@ -17,7 +17,8 @@ export class ExpressResponse implements RotiroMiddleware {
       method: this.request.method,
       url: this.request.originalUrl,
       body: this.request.body,
-      headers
+      headers,
+      originalRequest: this.request
     };
   }
 
