@@ -1,6 +1,6 @@
 {
   "name": "@rotirojs/rotiro-express",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Rotiro Express Middleware",
   "author": "Alex Everitt",
   "scripts": {
@@ -30,7 +30,7 @@
     "typescript": "^4.0.5"
   },
   "dependencies": {
-    "rotiro": "^1.0.15"
+    "rotiro": "^1.0.32"
   },
   "bugs": {
     "url": "https://github.com/rotirojs/rotiro-express/issues"
