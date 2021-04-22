@@ -74,4 +74,11 @@ describe('middleware/express/express-response', () => {
     const requestDetail: RequestDetail = expressResponse.requestDetail;
     expect(requestDetail.originalRequest).toEqual(request);
   });
+
+  it('Calls setHeader multiple times for duplicate headers', () => {
+    expressResponse.sendResponse('A message', 200, '', {
+      'Set-Cookie': ['Value 1', 'Value 2']
+    });
+    expect(response.setHeader).toBeCalledTimes(2);
+  });
 });

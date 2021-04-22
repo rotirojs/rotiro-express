@@ -30,11 +30,19 @@ export class ExpressResponse implements RotiroMiddleware {
     body: any,
     status?: number,
     contentType?: string,
-    headers?: Record<string, string>
+    headers?: Record<string, string | string[]>
   ) {
     if (headers) {
       for (const headerKey of Object.keys(headers)) {
-        this.response.setHeader(headerKey, headers[headerKey]);
+        const headerValue: string | string[] = headers[headerKey];
+        if (Array.isArray(headerValue)) {
+          for (const headerValueItem of headerValue) {
+            // write multiple headers e.g. set-cookie
+            this.response.setHeader(headerKey, headerValueItem);
+          }
+        } else {
+          this.response.setHeader(headerKey, headerValue);
+        }
       }
     }
     this.response.type(contentType || 'text/plain');
