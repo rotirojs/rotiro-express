@@ -35,14 +35,11 @@ export class ExpressResponse implements RotiroMiddleware {
     if (headers) {
       for (const headerKey of Object.keys(headers)) {
         const headerValue: string | string[] = headers[headerKey];
-        if (Array.isArray(headerValue)) {
-          for (const headerValueItem of headerValue) {
-            // write multiple headers e.g. set-cookie
-            this.response.setHeader(headerKey, headerValueItem);
-          }
-        } else {
-          this.response.setHeader(headerKey, headerValue);
-        }
+        // express should handle the array of values internally
+        // calling setHeader multiple times for the same key
+        // will cause express to overwrite the first header
+        // e.g. set-cookie called multiple times only sets one cookie
+        this.response.setHeader(headerKey, headerValue);
       }
     }
     this.response.type(contentType || 'text/plain');
