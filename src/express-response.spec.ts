@@ -79,6 +79,6 @@ describe('middleware/express/express-response', () => {
     expressResponse.sendResponse('A message', 200, '', {
       'Set-Cookie': ['Value 1', 'Value 2']
     });
-    expect(response.setHeader).toBeCalledTimes(2);
+    expect(response.setHeader).toBeCalledTimes(1);
   });
 });
