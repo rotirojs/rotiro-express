@@ -2938,9 +2938,9 @@ rimraf@^3.0.0:
     glob "^7.1.3"
 
 rotiro@^1.0.32:
-  version "1.0.42"
-  resolved "https://registry.yarnpkg.com/rotiro/-/rotiro-1.0.42.tgz#476db41d484d5e5e541796e358cfcc7890b0164f"
-  integrity sha512-O8uHFCzuZCgBSdJXB7xJrvuP3VoOkisK+6NkFvIMXo/dHEZGhbpgY+JZfHOPKPH1SjbL+ZB+ej/NAt4/EW9Rww==
+  version "1.0.43"
+  resolved "https://registry.yarnpkg.com/rotiro/-/rotiro-1.0.43.tgz#a5f9eb3a060e54e9df2d555d0b3abde02477d4a8"
+  integrity sha512-siDgu5YRO9qrhrlS7Pve5UIEjA3aBrEloDtJq4yD1GMO37iL44yDN4KRbEUCWo/42DzjXN+ShL7i8nYxVus0Cg==
   dependencies:
     debug "^4.3.1"
     path-to-regexp "^6.2.0"
